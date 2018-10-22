@@ -9,9 +9,10 @@ class Neuron {
         Neuron(int);
         Neuron(int,double);
         double Eval(vector<double>);
-        double Sample(vector<double>, int);
+        double Learn(vector<double>&);
     private:
         double weight[3];
         double bias;
-        double learningRate();
+        double learningRate;
+        int inputCount;
 };
