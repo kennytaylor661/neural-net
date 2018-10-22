@@ -9,7 +9,7 @@ class Neuron {
         Neuron(int);
         Neuron(int,double);
         double Eval(vector<double>);
-        double Learn(vector<double>&);
+        void Learn(vector<double>&);
     private:
         double weight[3];
         double bias;
