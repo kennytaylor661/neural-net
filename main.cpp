@@ -3,9 +3,12 @@
 // 10/22/18
 
 #include <ostream>
+#include "neuron.h"
+
 using namespace std;
 
-void main()
+int main()
 {
 
+    return 0;
 }
