@@ -41,7 +41,7 @@ void Neuron::Learn(vector<double> &input)
     // Calculate the current output
     waverage = input[0]*weight[0] + input[1]*weight[1];
     // WHY DOES THIS RETURN FALSE WHEN 0.2 >= 0.2 ??
-    if (waverage >= bias)
+    if ((float)waverage >= (float)bias)
         output = 1;
     else
         output = 0;
@@ -55,5 +55,5 @@ void Neuron::Learn(vector<double> &input)
 
     // Calculate new weight 2
     weight[1] = weight[1] + learningRate * input[1] * error;
-    cout << "  New w2 = " << weight[1] << endl;
+    cout << "  New w2 = " << weight[1] << endl << endl;
 }
