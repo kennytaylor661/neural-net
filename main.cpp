@@ -30,17 +30,13 @@ int main()
     sample4[1] = 1;         // Input 2
     sample4[2] = 1;         // Desired output
 
-    // Epoch 1
-    n.Learn(sample1);
-    n.Learn(sample2);
-    n.Learn(sample3);
-    n.Learn(sample4);
-
-    // Epoch 2
-    n.Learn(sample1);
-    n.Learn(sample2);
-    n.Learn(sample3);
-    n.Learn(sample4);
+    // Run five epochs
+    for(int i = 0; i < 5; i++) {
+        n.Learn(sample1);
+        n.Learn(sample2);
+        n.Learn(sample3);
+        n.Learn(sample4);
+    }
 
     return 0;
 }
